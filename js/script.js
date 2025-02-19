@@ -6,13 +6,19 @@ const timerElement = document.getElementById('timer')
 const scoreElement = document.getElementById('score')
 const tipElement = document.getElementById('tip')
 const messageTitle = document.getElementById('message-title') //
+const gameSection = document.querySelector('#game')
+const scoreboardSection = document.querySelector('#scoreboard')
 
 document.getElementById('play-button').onclick = () => {
     document.getElementById('play').remove()
+    gameSection.classList.add('active')
+    scoreboardSection.classList.add('active')
 }
 
 const min = 1
 const max = 101
+
+messageTitle.innerHTML = `<span>Компьютер</span>: я загадал число ${min}-${max}. Твоя задача его угадать!`
 
 let milliseconds = 0;
 let seconds = 0;
@@ -71,9 +77,6 @@ function getTip() {
 }
 
 function game() {
-
-    console.log(`Загаданное число: ${randomNumber}`)
-
     if (Number(playerAnswer.value) === randomNumber) {
         getVictoryMessage()
         tipElement.innerHTML = ``

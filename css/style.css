@@ -83,11 +83,13 @@ body {
   font-family: "Nunito", serif;
   background-color: #1b1b1b;
   color: #fff;
+  overflow: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .menu-play {
@@ -132,7 +134,15 @@ body {
 }
 
 .scoreboard__timer {
-  width: 76px;
+  width: 98px;
+}
+
+.game {
+  display: none;
+}
+
+.scoreboard {
+  display: none;
 }
 
 .game__wrapper {
@@ -184,4 +194,31 @@ body {
 
 .active {
   display: block;
+}
+
+@media (max-width: 472px) {
+  .menu-play__title {
+    text-align: center;
+  }
+  .gameplay-wrapper {
+    flex-direction: column;
+  }
+  .scoreboard__wrapper {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .scoreboard__timer {
+    display: none;
+  }
+  .scoreboard__wrapper {
+    height: 0;
+    gap: 5px;
+  }
+  .gameplay__input {
+    width: 100%;
+  }
+  .gameplay__check-button {
+    width: 100%;
+    text-align: center;
+  }
 }
