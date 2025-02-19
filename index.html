@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess-number</title>
+    <link rel="shortcut icon" href="./img/icon.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="main">
+        <section class="menu-play active" id="play">
+            <div class="menu-play__wrapper">
+                <div class="menu-play__title">
+                    <span>игра</span>: угадай число
+                </div>
+                <div class="menu-play__button" id="play-button">играть</div>
+            </div>
+        </section>
+        <section class="scoreboard">
+            <div class="container">
+                <div class="scoreboard__wrapper">
+                    <div class="scoreboard__score" id="score">
+                        score: 0
+                    </div>
+                    <div class="scoreboard__title">
+                        Угадай число
+                    </div>
+                    <div class="scoreboard__timer" id="timer">
+                        00:00:000
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="game">
+            <div class="container">
+                <div class="game__wrapper">
+                    <div class="game__message-title" id="message-title">
+                        <span>Компьютер</span>: я загадал число 1-101. Твоя задача его угадать!
+                    </div>
+                    <div class="gameplay-wrapper">
+                        <input type="number"
+                        class="gameplay__input"
+                        id="player-answer"
+                        placeholder="Ответ">
+                        <div class="gameplay__check-button" id="check-button">
+                            Проверить 
+                        </div>
+                    </div>
+                    <div class="game__victory-message" id="victory">
+                        <span>Ура! Вы угадали!</span>
+                    </div>
+                    <div class="game__tip" id="tip">
+                        <!-- <span>Подсказка</span>: больше -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Nunito", serif;
+    background-color: #1b1b1b;
+    color: #fff;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.menu-play{
+    display: none;
+}
+.menu-play__wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.menu-play__title {
+    font-size: 50px;
+    & span {
+        font-weight: 700;
+    }
+}
+.menu-play__button {
+    width: 110px;
+    height: 70px;
+    background-color: #146077;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.scoreboard__wrapper {
+    height: 100px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.scoreboard__timer{
+    width: 76px;
+}
+.game__wrapper {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 24px;
+    & span {
+        font-weight: 700;
+    }
+}
+.gameplay__input{
+    border: 1px solid #fff;
+    background-color: inherit;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 10px;
+}
+.game__victory-message{
+    display: none;
+    font-weight: 700;
+    font-size: 30px;
+}
+.gameplay-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.gameplay__check-button{
+    padding: 10px 15px;
+    background-color: #146077;
+    border-radius: 5px;
+    cursor: pointer;
+    &:active{
+        transform: translateY(2px);
+    }
+}
+.active{
+    display: block;
+}
